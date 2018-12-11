@@ -29,18 +29,17 @@ class Widget extends Component {
     // }
 
     render() {
+        const { cities, days} = this.props;
+        let daysList = [days.list[0],days.list[8],days.list[16],days.list[24],days.list[32]];
         return (
             <div className={styles.widget}>
                 <ul className={styles.widget__list}>
-                    {this.props.cities.list.map(city => (
+                    {cities.list.map(city => (
                         <li key={city.id} className={styles.widget__item}>
                             <City name={city.name}
                                   temp={city.main.temp}
-                                  weather={city.weather[0].main}
                                   code={city.weather[0].id}
-                                  days={this.props.days.list[0]}
-                                  daytemp={this.props.days.list[0].main.temp - 273.15}
-                                  d={this.props.days.list[0].weather[0].id}
+                                  days={daysList}
                             />
                         </li>
                     ))}

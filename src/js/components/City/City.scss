@@ -4,13 +4,28 @@
   align-items: center;
   height: 100%;
   padding-top: 45px;
+  cursor: pointer;
+}
+
+.city__open {
+  cursor: pointer;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  height: 50%;
 }
 
 .city__weather {
   color: white;
   height: 85px;
   width: 85px;
+}
 
+.city__weather__open {
+  color: white;
+  padding-top: 0;
+  width: 65px;
+  height: 65px;
 }
 
 .city__main {
@@ -19,3 +34,7 @@
   display: flex;
   color: white;
  }
+
+.city__main__hidden {
+  display: none;
+}
