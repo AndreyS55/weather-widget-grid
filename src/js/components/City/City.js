@@ -5,7 +5,6 @@ import List from '../List/List';
 import styles from './City.scss';
 
 class City extends Component {
-
     constructor (props) {
         super (props);
         this.state = {
@@ -24,14 +23,13 @@ class City extends Component {
         let iconClass = styles.city__weather;
         let cityNameClass = styles.city__main;
         if (this.state.showDetails) {
-            itemClass += styles.city__open;
+            itemClass = styles.city__open;
             iconClass = styles.city__weather__open;
             cityNameClass = styles.city__main__hidden;
             weatherDetails = (
                 <List days={days}/>
             );
         }
-        console.log(styles.city);
         return (
             <React.Fragment>
                 <div className={itemClass} onClick={this.handleClick.bind(this)}>
