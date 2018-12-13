@@ -6,9 +6,10 @@ import styles from './List.scss';
 const dayNameConverter = (name) => new Date(name).toLocaleString('en', {weekday: 'short'});
 
 const Late = (props) => {
+    let days = [props.days.list[0],props.days.list[8],props.days.list[16],props.days.list[24],props.days.list[32]];
     return (
     <ul className={styles.days__list}>
-        {props.days.map(day => (
+        {days.map(day => (
             <li key={day.id} className={styles.days__item}>
                 <div className={styles.day}>
                     <div className={styles.day__name}>{dayNameConverter(day.dt_txt)}</div>
