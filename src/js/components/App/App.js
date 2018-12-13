@@ -1,5 +1,6 @@
 import React from 'react';
+import WidgetContainer from '../WidgetContainer/WidgetContainer';
 
-const App = () => <h1>Hello</h1>;
+const App = () => <WidgetContainer />;
 
 export default App;

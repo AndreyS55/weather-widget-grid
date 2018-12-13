@@ -1,0 +1,36 @@
+.days__list {
+  color: #ffffff;
+  height: 50%;
+  background-color: rgba(44, 54, 39, 0.3);
+  //padding: 20px 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.days__item {
+
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day__name, .day__temp {
+  font-size: 11px;
+}
+
+.day__name {
+  padding-bottom: 10px;
+}
+
+.day__temp {
+  padding-top: 10px;
+}
+
+.day__weather {
+  height: 20px;
+  width: 20px;
+}
