@@ -18,6 +18,7 @@ class WidgetContainer extends Component {
         super(props);
         this.state = {
             cities: [],
+            error: {}
         }
     }
 
@@ -28,14 +29,15 @@ class WidgetContainer extends Component {
                 this.setState({cities: json.list})
             })
             .catch((error) => {
+                this.setState({error: error});
                 console.log('Error fetching and parsing data', error);
             });
     }
 
     render() {
-        return (
-            <Widget cities={this.state.cities}/>
-        );
+        return this.state.cities.length
+            ? <Widget cities={this.state.cities}/>
+            : <h1 style={{color: '#F00000'}}>{this.state.error.toString()}</h1>
     }
 }
 

@@ -30,6 +30,11 @@ body {
 	font-family: "robotoblack", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	& > *{
+		@include tablets(){
+			height: 100%;
+		}
+	}
 	@include tablets(){
 		display: block;
 	}
