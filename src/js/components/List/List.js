@@ -10,12 +10,10 @@ const Late = (props) => {
     return (
     <ul className={styles.days__list}>
         {days.map(day => (
-            <li key={day.id} className={styles.days__item}>
-                <div className={styles.day}>
-                    <div className={styles.day__name}>{dayNameConverter(day.dt_txt)}</div>
-                    <WeatherIcon name="owm" iconId={''+ day.weather[0].id} className={styles.day__weather}/>
-                    <div className={styles.day__temp}>{(day.main.temp - 273.15).toFixed(1)}&deg;</div>
-                </div>
+            <li key={day.id} className={styles.day}>
+                <div className={styles.day__name}>{dayNameConverter(day.dt_txt)}</div>
+                <WeatherIcon name="owm" iconId={''+ day.weather[0].id} className={styles.day__weather}/>
+                <div className={styles.day__temp}>{(day.main.temp - 273.15).toFixed(1)}&deg;</div>
             </li>
         ))}
     </ul>

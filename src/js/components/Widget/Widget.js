@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import City from '../City/City';
 
 import styles from './Widget.scss';

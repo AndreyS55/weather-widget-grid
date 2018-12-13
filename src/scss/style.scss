@@ -1,4 +1,5 @@
-@import 'weather-icons.min.css';
+@import '~weathericons/sass/weather-icons.min';
+@import "mixins";
 
 @font-face {
 	font-family: 'robotoblack';
@@ -16,17 +17,25 @@
 html {
 	width: 100%;
 	height: 100%;
+	font-size: 16px;
 }
 
 body {
+	margin: 0;
 	background: #f0f0f0;
 	height: 100%;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	font-family: "robotoblack", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	@include tablets(){
+		display: block;
+	}
+	@include phones(){
+		display: block;
+	}
 }
 
 ul {
@@ -45,10 +54,4 @@ p {
 
 a {
 	text-decoration: none;
-}
-
-.App {
-	height: 100%;
-	overflow: hidden;
-
 }
