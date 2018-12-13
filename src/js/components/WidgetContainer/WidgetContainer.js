@@ -17,7 +17,7 @@ class WidgetContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            cities: [],
+            cities: []
         }
     }
 
@@ -33,9 +33,7 @@ class WidgetContainer extends Component {
     }
 
     render() {
-        return (
-            <Widget cities={this.state.cities}/>
-        );
+        return <Widget cities={this.state.cities}/>
     }
 }
 
