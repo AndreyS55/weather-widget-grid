@@ -49,7 +49,7 @@ class City extends Component {
             <React.Fragment>
                 <div className={itemClass} onClick={this.handleClick.bind(this)}>
                     <WeatherIcon name="owm" iconId={''+ code} className={iconClass}/>
-                    <div className={cityNameClass}>{name} / {temp}&deg;</div>
+                    <div className={cityNameClass}>{name} / {temp.toFixed(1)}&deg;</div>
                 </div>
                 {weatherDetails}
             </React.Fragment>

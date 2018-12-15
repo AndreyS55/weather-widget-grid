@@ -24,15 +24,30 @@ body {
 	margin: 0;
 	background: #f0f0f0;
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: block;
 	font-family: "robotoblack", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	& > *{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
 		@include tablets(){
 			height: 100%;
+			position: static;
+			top: 0;
+			left: 0;
+			margin: 0;
+			transform: none;
+		}
+		@include phones(){
+			position: static;
+			top: 0;
+			left: 0;
+			margin: 0;
+			transform: none;
 		}
 	}
 	@include tablets(){
