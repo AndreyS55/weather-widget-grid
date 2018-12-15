@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   height: 100%;
   cursor: pointer;
-  &__open{
+  &--is-open{
     cursor: pointer;
     padding-top: 0;
     display: flex;
@@ -16,7 +15,8 @@
   &__weather{
     color: white;
     font-size: 60px;
-    &__open{
+    padding-top: 45px;
+    &--is-open{
       color: white;
       font-size: 40px;
     }
@@ -25,7 +25,8 @@
     font-size: 1rem;
     display: flex;
     color: white;
-    &__hidden{
+    padding-top: 45px;
+    &--is-hidden{
       display: none;
     }
   }

@@ -38,9 +38,9 @@ class City extends Component {
         let iconClass = styles.city__weather;
         let cityNameClass = styles.city__main;
         if (this.state.showDetails) {
-            itemClass = styles.city__open;
-            iconClass = styles.city__weather__open;
-            cityNameClass = styles.city__main__hidden;
+            itemClass = styles['city--is-open'];
+            iconClass = styles['city__weather--is-open'];
+            cityNameClass = styles['city__main--is-hidden'];
             weatherDetails = (
                 <List days={this.state.days}/>
             );
