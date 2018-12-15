@@ -4,7 +4,7 @@
   align-items: center;
   height: 100%;
   cursor: pointer;
-  &__open{
+  &--is-open{
     cursor: pointer;
     padding-top: 0;
     display: flex;
@@ -15,8 +15,8 @@
   &__weather{
     color: white;
     font-size: 60px;
-    padding-top: 40px;
-    &__open{
+    padding-top: 45px;
+    &--is-open{
       color: white;
       font-size: 40px;
     }
@@ -25,8 +25,8 @@
     font-size: 1rem;
     display: flex;
     color: white;
-    padding-top: 50px;
-    &__hidden{
+    padding-top: 45px;
+    &--is-hidden{
       display: none;
     }
   }
